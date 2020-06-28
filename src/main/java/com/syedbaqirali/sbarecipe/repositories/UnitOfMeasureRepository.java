@@ -12,5 +12,5 @@ import com.syedbaqirali.sbarecipe.domain.UnitOfMeasure;
  *
  */
 public interface UnitOfMeasureRepository extends CrudRepository<UnitOfMeasure, Long>{
-
+/**/
 }
