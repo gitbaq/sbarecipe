@@ -3,48 +3,38 @@
  */
 package com.syedbaqirali.sbarecipe.controllers;
 
-import java.util.Optional;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.syedbaqirali.sbarecipe.domain.Category;
-import com.syedbaqirali.sbarecipe.domain.UnitOfMeasure;
-import com.syedbaqirali.sbarecipe.repositories.CategoryRepository;
-import com.syedbaqirali.sbarecipe.repositories.UnitOfMeasureRepository;
+import com.syedbaqirali.sbarecipe.services.RecipeService;
 
 /**
- * @author rever
+ * @author SBA on 07/02/2020
  *
  */
 @Controller
 public class IndexController {
 	
-	private CategoryRepository categoryRepository;
+	
+	private final RecipeService recipeService;
+	
+	
+	
 	/**
-	 * @param categoryRepository
-	 * @param unitOfMeasureRepository
+	 * @param recipeService
 	 */
-	public IndexController(CategoryRepository categoryRepository, UnitOfMeasureRepository unitOfMeasureRepository) {
+	public IndexController(RecipeService recipeService) {
 		super();
-		this.categoryRepository = categoryRepository;
-		this.unitOfMeasureRepository = unitOfMeasureRepository;
+		this.recipeService = recipeService;
 	}
 
 
 
-	private UnitOfMeasureRepository unitOfMeasureRepository;
-	
-	
-	
 	@RequestMapping({"","/","/index"})
-	public String getIndexPage() {
+	public String getIndexPage(Model model) {
 		
-		Optional<Category> categoryOptional = categoryRepository.findByDescription("Italian");
-		Optional<UnitOfMeasure> unitOfMeasureOptional = unitOfMeasureRepository.findByDescription("Pinch");
-		
-		System.out.println("Cat Id is: " + categoryOptional.get().getDescription());
-		System.out.println("UOM Id is: " + unitOfMeasureOptional.get().getDescription());
+		model.addAttribute("recipes", recipeService.getRecipes());
 		return "index";
 	}
 
