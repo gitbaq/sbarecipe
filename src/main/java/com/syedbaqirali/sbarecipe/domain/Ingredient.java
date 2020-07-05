@@ -13,10 +13,13 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import lombok.Data;
+
 /**
  * @author SBA on 06/27/2020
  *
  */
+@Data
 @Entity
 public class Ingredient {
 	
@@ -39,47 +42,7 @@ public class Ingredient {
         this.uom = uom;
     }
 
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
 
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	/**
-	 * @return the description
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * @param description the description to set
-	 */
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	/**
-	 * @return the amount
-	 */
-	public BigDecimal getAmount() {
-		return amount;
-	}
-
-	/**
-	 * @param amount the amount to set
-	 */
-	public void setAmount(BigDecimal amount) {
-		this.amount = amount;
-	}
 
 	/**
 	 * @return the recipe
