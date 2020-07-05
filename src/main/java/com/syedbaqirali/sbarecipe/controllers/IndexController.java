@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.syedbaqirali.sbarecipe.services.RecipeService;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author SBA on 07/02/2020
  *
  */
+@Slf4j
 @Controller
 public class IndexController {
 	
@@ -25,7 +28,9 @@ public class IndexController {
 	 * @param recipeService
 	 */
 	public IndexController(RecipeService recipeService) {
+		
 		super();
+		log.debug("I'm in the Index Controller");
 		this.recipeService = recipeService;
 	}
 
@@ -33,7 +38,7 @@ public class IndexController {
 
 	@RequestMapping({"","/","/index"})
 	public String getIndexPage(Model model) {
-		
+		log.debug("I'm in the Index Controller getIndexPage");
 		model.addAttribute("recipes", recipeService.getRecipes());
 		return "index";
 	}
