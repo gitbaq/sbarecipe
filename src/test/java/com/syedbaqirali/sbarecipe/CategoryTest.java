@@ -50,29 +50,8 @@ class CategoryTest {
 	void tearDown() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#hashCode()}.
-	 */
-	@Test
-	void testHashCode() {
-		fail("Not yet implemented");
-	}
+	
 
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#getRecipes()}.
-	 */
-	@Test
-	void testGetRecipes() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#setRecipes(java.util.Set)}.
-	 */
-	@Test
-	void testSetRecipes() {
-		fail("Not yet implemented");
-	}
 
 	/**
 	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#getId()}.
@@ -84,68 +63,6 @@ class CategoryTest {
 		assertEquals(idValue, category.getId());
 	}
 
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#getDescription()}.
-	 */
-	@Test
-	void testGetDescription() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#setId(Long)}.
-	 */
-	@Test
-	void testSetId() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#setDescription(String)}.
-	 */
-	@Test
-	void testSetDescription() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#toString()}.
-	 */
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#Category()}.
-	 */
-	@Test
-	void testCategory() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#equals(java.lang.Object)}.
-	 */
-	@Test
-	void testEqualsObject() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link com.syedbaqirali.sbarecipe.domain.Category#canEqual(java.lang.Object)}.
-	 */
-	@Test
-	void testCanEqual() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link java.lang.Object#toString()}.
-	 */
-	@Test
-	void testToString1() {
-		fail("Not yet implemented");
-	}
+	
 
 }
